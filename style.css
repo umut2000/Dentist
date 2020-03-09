@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Quicksand';
     width: auto;
@@ -8,21 +7,23 @@ body {
     position: relative;
     min-height: 100vh;
 }
+
 #page-container {
     position: relative;
     min-height: 100vh;
-  }
-header { 
-    background:#C4E6B1;
+}
+
+header {
+    background: #C4E6B1;
     margin: 0 auto;
     max-width: 100%;
     height: 120px;
     display: flex;
-    align-items: center;      
+    align-items: center;
 }
 
 footer {
-    background:#C4E6B1;
+    background: #C4E6B1;
     width: 100%;
     height: 120px;
     display: flex;
@@ -30,64 +31,71 @@ footer {
     align-items: center;
     position: absolute;
     bottom: 0;
-    
 }
-header > div {
-    position: absolute; 
+
+header>div {
+    position: absolute;
     width: 100%;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
-
-h1{ 
+h1 {
     font-family: 'Quicksand';
     color: #2A2D2A;
     font-size: 1.8em;
     font-weight: bold;
-    
 }
-h1.title{
+
+h1.title {
     margin: 0 auto;
     text-align: left;
     line-height: 150%;
-    max-width:1024px;
+    max-width: 1024px;
     padding: 0 4vw;
-    width: 100%;
+    pointer-events: none;
 }
-
 
 @media (max-width: 850px) {
     h1.title {
         font-size: 1.6em;
-        margin-bottom: 40px;
     }
 }
 
+@media (max-width: 460px) {
+    nav>a {
+        display: none;
+    }
+    h4.implantat {
+        font-size: 1.2em;
+    }    
+}
 
-h2{
+@media (min-width: 460px) {
+    .openbtn {
+        display: none;
+    }
+}
+
+h2 {
     font-family: 'Roboto Slab';
-    color:#2A2D2A ;
+    color: #2A2D2A;
     font-size: 1.4em;
-    font-weight: bold; 
+    font-weight: bold;
     line-height: normal;
-}  
+}
 
-
-
-h2.title{
+h2.title {
     font-family: 'Quicksand';
 }
 
-
-h3{
+h3 {
     color: #2A2D2A;
     font-size: 20px;
     font-weight: bold;
 }
 
-
-h4{
-    color: #047100 ;
+h4 {
+    color: #047100;
     font-size: 1.3em;
     font-weight: bold;
     background-color: #ffffff90;
@@ -100,38 +108,35 @@ h4.implantat {
     padding: 10px;
 }
 
-h5{
+h5 {
     color: #047100;
     font-size: 20px;
     font-weight: bold;
-
 }
-p{
+
+p {
     color: #2A2D2A;
     font-size: 1em;
     font-weight: normal;
-    float: left;
-    
-    
-    /* margin: 50px; */
 }
-p.reinigung{
+
+p.reinigung {
     width: auto;
     justify-content: space-evenly;
     margin: 40px;
 }
-#green{
+
+#green {
     color: #047100;
     font-size: 16px;
     font-weight: bold;
-    width: 500px;    
-}
-p.kontakt{
-    width: 500px; 
-    margin-top: 0px;
-    line-height: normal;
 }
 
+p.kontakt {
+    margin-top: 0px;
+    line-height: normal;
+    max-width: 100%;
+}
 
 footer p {
     color: #2A2D2A;
@@ -150,48 +155,53 @@ footer p {
     backdrop-filter: blur(5px);
 }
 
-.white > div {
+.white>div {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    max-width: 100%;   
+    margin: 30px 0;
+    max-width: 100%;
+}
+
+.leistungen-karte>div {
+    padding: 20px;
 }
 
 .body {
     background: url("assets/hintergrund.jpg");
     background-size: auto;
     background-size: cover;
-    
-     
 }
-.menu{
+
+.menu {
     justify-content: flex-end;
     display: flex;
     height: 120px;
     margin-left: auto;
     margin-top: 100px;
 }
-.termin
-{
-    columns: 3;
+
+.termin {
+    justify-content: space-between;
 }
+
+.termin>div {
+    max-width: 500px;
+}
+
 @media (max-width: 1000px) {
-   .white > div {
+    .align-left>div {
         align-items: flex-start;
     }
 }
 
- 
-nav{
+nav {
     float: right;
     margin-left: auto;
     margin-top: auto;
-
     display: flex;
 }
 
-
-a{
+a {
     color: #2A2D2A;
     font-weight: bold;
     font-size: 16px;
@@ -203,31 +213,32 @@ a{
     padding-bottom: 5px;
 }
 
-
-
-a.zahnreinigung{
-    margin-bottom: 50px;
-}
-
-a:hover{
-    
+a:hover {
     background-color: #C4E6B1;
     color: #047100;
 }
 
 @media (max-width: 1000px) {
-    .white > div {
-        flex-direction: column;
+    .white>div {
+        flex-direction: column-reverse;
+    }
+    img {
+        width: 80%;
+        max-width: 512px;
+    }
+    .leistungen-karte img {
+        margin-bottom: 32px;
     }
 }
-figure{
+
+figure {
     position: relative;
-  }
-    figure img {
+}
+
+figure img {
     height: auto;
     width: 50%;
 }
-
 
 figcaption {
     padding: 10px;
@@ -238,57 +249,116 @@ figcaption {
     color: #2A2D2A;
     background-color: #ffffff90;
 }
-button{
+
+button {
     color: #2A2D2A;
     font-family: 'Roboto Slab';
     font-size: 20px;
     font-weight: bold;
     background-color: #ffffff90;
     padding: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     border: none;
-    margin: 50px auto;
-    
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 0px auto;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
-button:hover
-{
+
+button:hover {
     background-color: #C4E6B1;
     color: #2A2D2A;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+
 button:active {
     background-color: #C4E6B1;
     color: #2A2D2A;
     box-shadow: 0px 5px 10px 5px #2A2D2A;
     transform: translateY(4px);
-  }
-  
-.zahnreinigung
-{
-    justify-content: space-evenly;
-    
 }
 
-.zahnreinigung > * {
+.zahnreinigung {
+    justify-content: space-evenly;
+}
+
+.zahnreinigung>* {
     flex: 1 0;
 }
 
-
-
 /* Bilder */
 
-#team{
+#team {
     width: 50%;
     height: auto;
-    
 }
-@media (max-width: 900px) {
-    #team{
-      min-width:100%;
-      margin-bottom: 50px;
+
+@media (max-width: 1000px) {
+    #team {
+        min-width: 100%;
     }
 }
 
-  
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #C4E6B1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 16px 8px;
+    font-size: 20px;
+    color: #2A2D2A;
+    background-color: #ffffff90;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #C4E6B1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff90;
+    color: #2A2D2A;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    right: 0;
+}
+
+.openbtn:hover {
+    background-color: #C4E6B1;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
