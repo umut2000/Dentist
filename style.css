@@ -58,6 +58,7 @@ h1.title {
 @media (max-width: 850px) {
     h1.title {
         font-size: 1.6em;
+        margin-bottom: 20px;    
     }
 }
 
